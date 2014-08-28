@@ -1,2 +1,2 @@
-comp398
+Comp398 Web Application Development
 =======
