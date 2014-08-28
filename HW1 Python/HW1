@@ -1,0 +1,24 @@
+def listFile(fileName):
+	with open(fileName, "r") as document:
+		return document.read() 
+
+class Node:
+	def createNode(self, data):
+		self.data = data
+		self.next = None
+
+class linkedlist:
+	def createList(self):
+		self.head = None
+		self.tail = None
+
+
+def main():
+	i = 0;
+	fileContents = listFile("ListOfBeyonceFilms.txt")
+	for line in fileContents:
+		createNode(i,line)
+		i = i+i
+
+if __name__ == '__main__':
+	main()
