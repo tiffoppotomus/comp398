@@ -8,19 +8,28 @@
 
 #include <iostream>
 #include <fstream>
-#include "Node.cpp"
+
 
 using namespace std;
 
+struct Node
+{
+    string text;
+    Node *next;
+};
+//=========================================================
+//=========================================================
 
 int main()
 {
+    //Declarations of variables----------------------------
+    short i=0;
+    Node *headNode, *node1, *node2, *node3, *tailNode, *currentNode;
     
-    //=========================================================//
-    //open and read from flat file database
+    //open file to read------------------------------------
     ifstream fin;
     
-    string fileName = "StateAndAbb";
+    string fileName = "ListOfBeyonceFilms.txt";
     string line;
     
     fin.clear();
@@ -32,31 +41,44 @@ int main()
         cout << "ERROR! File called " << fileName << " failed to open." << endl;
         exit(-1);
     }
+
     
+    //creating empty linked list----------------------------
+    tailNode->next = NULL;
+    currentNode = headNode;
     
+    headNode->next = node1;
+    node1->next = node2;
+    node2->next = node3;
+    node3->next = tailNode;
+    
+    //retrieve data from file-------------------------------
     getline(fin, line);
-    short i=0;
+    
     while(fin)
     {
         cout << i << ". " << line << endl;
         
-        node listFromText(i,line);
+        if(currentNode->next!=NULL)
+        {
+            currentNode->text = line;
+            currentNode = currentNode->next;
+        }
+        
+        
         
         i++;
-        
-        
         getline(fin, line);
     }
-    //=========================================================//
+    
 
     
     
     
     
-    //=========================================================//
+    
     fin.close();
-    
-    
+
     return 0;
     
 }//end main
