@@ -24,7 +24,7 @@ int main()
 {
     //Declarations of variables----------------------------
     short i=0;
-    Node *headNode, *node1, *node2, *node3, *tailNode, *currentNode;
+    Node *h,*t,*currentNode;
     
     //open file to read------------------------------------
     ifstream fin;
@@ -44,38 +44,54 @@ int main()
 
     
     //creating empty linked list----------------------------
-    tailNode->next = NULL;
-    currentNode = headNode;
+
+    string x =  "";
+    currentNode = new Node;
+    currentNode->text = x;
+    h = currentNode;
+    t = currentNode;
     
-    headNode->next = node1;
-    node1->next = node2;
-    node2->next = node3;
-    node3->next = tailNode;
+    for(short y = 0; y<5; y++)
+    {
+        currentNode = new Node;
+        currentNode->text = x;
+        t->next = currentNode;
+        t = t->next;
+    }
+    
+    currentNode = h;
     
     //retrieve data from file-------------------------------
     getline(fin, line);
     
     while(fin)
     {
-        cout << i << ". " << line << endl;
         
-        if(currentNode->next!=NULL)
+        if(currentNode->next != t->next)
         {
             currentNode->text = line;
+            
+            cout << currentNode->text << endl;
+            
             currentNode = currentNode->next;
         }
         
-        
+        else
+        {
+            currentNode = new Node;
+            currentNode->text = line;
+            
+            cout << currentNode->text << endl;
+            
+            t->next = currentNode;
+            t = t->next;
+        }
         
         i++;
         getline(fin, line);
+        
+        
     }
-    
-
-    
-    
-    
-    
     
     fin.close();
 
