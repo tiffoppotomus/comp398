@@ -15,7 +15,7 @@ it?
 
 ***
 
-My [gitHub io](tiffoppotomus.github.io) is empty and has no text besides
+My [gitHub io](http://tiffoppotomus.github.io/) is empty and has no text besides
 “test” at the very top left hand corner of the webpage.
 
 This is a picture of an apple.  I like apples.
