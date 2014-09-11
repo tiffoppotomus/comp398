@@ -6,8 +6,8 @@
 
 >This is using a blockquote.
 >>This is a nested blockquote.
->1. list item 1 inside blockquote
->2. list item 2
+>1.list item 1 inside blockquote
+>2.list item 2
 
 This paragraph is not using any blockquotes. Rocks, papers, 
 scissors shoot!. I’m pretty hungry right now.  What time is
