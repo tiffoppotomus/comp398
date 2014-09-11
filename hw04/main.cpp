@@ -12,8 +12,10 @@
 
 #include <iostream>
 #include <fstream>
+#include "functions.h"
 
 using namespace std;
+
 
 int main()
 {
@@ -29,20 +31,15 @@ int main()
     //i to increment each line in the file reading
     string file_name;
     string line_in_file;
-    string file_out_name;
+    string file_out_name = "output.html";
     short i = 0;
-    short n;
     
     
     //The following cout and cin are to have user input decide what
     //files and file names are needed
     cout << "Please enter a file name you wish to read: " << endl;
     cin >> file_name;
-    cout << "Please enter a name you wish the output file be called.  An html extention will be added to the end of the name you entered: " << endl;
-    cin >> file_out_name;
-    file_out_name = file_out_name + ".html";
-    
-    
+
     
     //opens the files using the pathways that were created
     in_file.open(file_name.c_str());
@@ -57,30 +54,78 @@ int main()
     }
     
     
+    //setting up the html document we are writing
+    out_file << "<!DOCTYPE html>" << endl << "<html lang = " << "en" << ">" << endl;
+    
+    
+    
     //when the files are open to read and write to
     getline(in_file, line_in_file);
     while(in_file)
     {
-        n = line_in_file.length();
-        for (short x = 0; x <= n; x++)
+        short n = line_in_file.length();
+        short header = 0;
+        short blockquote = 0;
+        
+        
+        for (short x = 0; x < n; x++)
         {
-            if(line_in_file[0] = "#" or ">" or "*" or "_" or "!" or "[")
+            if (line_in_file[x] == '#')
             {
-                
-            }//end if
+                header++;
+            }
             
-            else
+            if (line_in_file[x] == '>')
             {
-                //This doesn't account for the paragraphs with mutliple lines
-                out_file << "<p>" << line_in_file << "</p>" << endl;
-                
-            }//end else
+                blockquote++;
+            }
+            
+            
+            
             
         }//end for
         
         
+        if(header != 0)
+        {
+            line_in_file.erase(0,header);
+            out_file << "<h" << header << ">" << line_in_file << "</h" << header << ">" << endl;
+        }//end if header
+        
+        
+        
+        if(blockquote !=0)
+        {
+            line_in_file.erase(0, blockquote);
+            
+            for( short y = blockquote; y>0; y--)
+            {
+                out_file << "<blockquote>";
+            }
+            
+            //if there is a header nested in the
+            
+            if(header != 0)
+            {
+                line_in_file.erase(0,header);
+                out_file << "<h" << header << ">" << line_in_file << "</h" << header << ">" << endl;
+            }//end if header
+            
+            else
+            {
+                out_file <<"<p>"<< line_in_file <<"</p>";
+            }
+            
+            for( short y = blockquote; y>0; y--)
+            {
+                out_file << "</blockquote>";
+            }
+            
+        }//end if blockquote
+
         i++;
         getline(in_file, line_in_file);
+    
     }//end while
     
     

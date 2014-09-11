@@ -6,4 +6,4 @@ This folder contains the files:
 * output.html
 * README.md
 
-This program is not in working condition or complete.  I still need to write  code that takes the specific Markdown symbols and turn that into html.  
+This program is in working condition but isn’t complete.  I still need to write something that will change markdown lists, pictures, and hyperlinks to html.
