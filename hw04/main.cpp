@@ -7,7 +7,7 @@
 
 
 /*
- Summary:  This file will convert a Mardown file to html.
+ Summary:  This file will convert a Markdown file to html.
  */
 
 #include <iostream>
@@ -66,7 +66,7 @@ int main()
         short n = line_in_file.length();
         short header = 0;
         short blockquote = 0;
-        
+        short listed_element = 0;
         
         for (short x = 0; x < n; x++)
         {
@@ -80,11 +80,23 @@ int main()
                 blockquote++;
             }
             
-            
-            
+            if(line_in_file[x]=='*')
+            {
+                listed_element++;
+            }
             
         }//end for
         
+        
+        if(listed_element == 3)
+        {
+            out_file << "<hr />"<<endl;
+        }
+        
+        if (blockquote == 0 && header == 0 && listed_element == 0)
+        {
+            out_file << "<p>" << line_in_file << "</p>";
+        }
         
         if(header != 0)
         {
@@ -93,8 +105,14 @@ int main()
         }//end if header
         
         
+        if(listed_element > 1)
+        {
+            line_in_file.erase(0, 1);
+            out_file << "<ul><li>" << line_in_file << "</li></ul>";
+        }//end if list
+
         
-        if(blockquote !=0)
+        if(blockquote !=0 and listed_element <= 1)
         {
             line_in_file.erase(0, blockquote);
             
@@ -108,21 +126,36 @@ int main()
             if(header != 0)
             {
                 line_in_file.erase(0,header);
-                out_file << "<h" << header << ">" << line_in_file << "</h" << header << ">" << endl;
+                out_file << "<h" << header << ">" << line_in_file << "</h" << header << ">";
             }//end if header
+            
+            //<if there there is just plain text inside the blockquote tags
             
             else
             {
-                out_file <<"<p>"<< line_in_file <<"</p>";
-            }
+                if(line_in_file[0] == '*' or line_in_file[0] == '-')
+                {
+                    line_in_file.erase(0, 1);
+                    out_file << "<ul><li>" << line_in_file << "</li></ul>";
+                }
+                
+                else
+                {
+                    out_file <<"<p>"<< line_in_file <<"</p>";
             
+                }
+            }//end else
+            
+            //</blockquote>
             for( short y = blockquote; y>0; y--)
             {
                 out_file << "</blockquote>";
             }
             
+            out_file << endl;
         }//end if blockquote
-
+        
+        
         i++;
         getline(in_file, line_in_file);
     
