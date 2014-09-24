@@ -1,0 +1,22 @@
+html {
+	background-color: #B8B8B8;
+}
+
+body {
+	font-family: Verdana, sans-serif;
+	background-color: #B2C7C7;
+}
+
+table {
+   	border-collapse: collapse;
+}
+
+table{
+	font-size:12px;
+	background-color:#CCFFFF; 
+}
+
+table, td, th {
+    border: 1px solid black;
+    text-align: center;
+}
