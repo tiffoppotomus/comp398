@@ -1,0 +1,5 @@
+Style Guide Evaluation
+The structure of the source code is neatly spaced and easy to read.  It is commented so that if someone who is already versed in C++ can understand.  In respect to the style guide there are some areas that do not follow the style guide closely.  One guideline was to comment at the top of each file describing its contents and that was only done for the main.cpp.
+
+Code Evaluation
+Everything is really straightforward with the code.  All the variable and function names are self explanatory and the definitions of the functions get the job done.  Aside from tweaking the code, allowing it to work on Xcode (because Sherry had done it on Visual Studios), everything ran smoothly and I was able to get a new output file every time.  The only thing that scratches my head is when I add a new country into the list, it shows up in the final output in the list of the Richest countries of the world as the first one on the list.  I don’t know if that was intentional or that was a mistake.

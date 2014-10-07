@@ -1,0 +1,1 @@
+This file contains this README.txt and main.cpp and a flat file database: ListOfBeyonceFilms.txt.  The main.cpp creates an empty list, add single nodes to the end of the list, populate the list from ListOfBeyonceFilms.txt as well as to display the plaintext form of the list.  This program works well without any errors.  I still need to put in code to search the list for a value.

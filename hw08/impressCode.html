@@ -1,0 +1,181 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+  
+
+
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+
+
+
+
+<body class="impress-not-supported">
+
+
+<div class="container">
+<div class="first"></div><div class="third"></div>
+<div class="second"></div><div class="fourth"></div><div class="last"></div>
+</div>​
+
+
+
+
+<div class="fallback-message">
+    <p>ERROR!!! with:
+ <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+
+
+<div id="impress">
+
+    <div id="title" class="step" data-x="7500" data-y="5500" data-scale="4">
+        <h1>Font Presentation<sup></sup></h1>
+        <span class="try">Welcome to CSS </span>
+    </div>
+
+
+
+    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="80" data-scale="5">
+        <p>CSS lets you heavily customize fonts!</strong> <br/>
+        the <b> weight, </b> </p> <p style="font-size:40%"> size, </p> <p> <i>style, </i> and <p style="font-family:Arial">font </p> can all be changed. <br/>
+        </p>
+    </div>
+
+
+
+    <div id="ing" class="step" data-x="3700" data-y="1200" data-rotate="170" data-scale="6"><p>up next <b>FONT</b> <span class="thoughts">FAMILY</span></p>
+</div>
+
+
+
+<div id="normal" class="step" data-x="5000" data-y="7000" data-z="-3000" data-rotate="120" data-scale="1">
+<p>The <span style="font-family: 'Comic Sans MS'">font-family property</span><span style="font-family: cursive"> allows you to </span> <span style="font-family:charcoal">specify generic families </span> <span style="font-family:tahoma"> and font families </span>.  <span style="font-family:'Trebuchet MS'"> This means the typeface.</span></p>
+<p>Generic families let you choose between, <b class="rotating" style="font-family:serif">serif,</b> <b class="rotating" style="font-family:sans-serif">sans-serif</b> and <b class="rotating" style="font-family:monospace">monospace</b></p>
+</div>
+<div id="ing" class="step" data-x="9300" data-y="05" data-rotate="200" data-scale="6">
+<p>You can also pick from specific font families like <p class="normal" style="font-family:'Times New Roman'"> <b> times new roman </b> or <b class="normal" style="font-family:'Courier New'"> courier new </b> </p>
+</div>
+
+
+
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+        <p>we can also do <p class="rotating" style="font-weight:900">weight.</p>  dont worry, it wont slow down your computer</p>
+    </div>
+
+    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+    <p>Lets see some examples of how to specify typeface using font-family</p>
+    <img src="example.png" />
+    </div>
+     
+
+
+    <div id="one-more-thing" class="step" data-x="10000" data-y="-4000"  data-scale="10">
+            <p style = "font-style: normal">The style of a text can be: <br> normal...</p>
+            <p style = "font-style: italic"> italic...</p>
+            <p style = "font-style: oblique"> oblique...</p>
+            <p>and can be written as followed in HTML: </p>
+            <img src ="styleSyntax.png" alt = "<p style = “font-style: normal|italic|oblique|inherit|initial”> TEXT HERE </p>" style = "width:588px;height:62px">
+        </div>    
+
+
+
+
+
+
+        <div id="title" class="step" data-x="7500" data-y="5500" data-scale="4">
+        <span class="try">Let's talk about</span>
+        <h1>font-size<sup></sup></h1>
+    </div>
+
+
+
+    <div id="big" class="step" data-x="8500" data-y="6500" data-rotate="180" data-scale="17">
+        <p>It can be really <b>big</b></p>
+    </div>
+
+
+
+<div id="tiny" class="step" data-x="9500" data-y="7500" data-z="-1800" data-rotate="270" data-scale="1">
+        <p>or it can be really <b>tiny</b></p>
+    </div>
+
+
+
+<div id="ing" class="step" data-x="9300" data-y="1800" data-rotate="180" data-scale="6">
+        <p>Let's see the <b class="positioning">syntax</b></p>
+    </div>
+
+    <div id="ing" class="step" data-x="7000" data-y="2000" data-rotate="180" data-scale="6">
+        <p>p{font-size: 14px;}</p>
+    </div>
+
+    <div id="ing" class="step" data-x="7000" data-y="1100" data-rotate="180" data-scale="6">
+        <p>p{font-size: 0.875em;}</p>
+    </div>
+
+
+
+
+    <div id="one-more-thing" class="step" data-x="10000" data-y="-4000" data-scale="10">
+        <p style="font-size:1.5em">Why are they different?</p>
+        <ul>
+            <li>- Absolute size</li>
+            <li>- Relative size</li>
+        </ul>
+    </div>
+
+        
+
+   
+    <div id="big" class="step" data-x="6500" data-y="4500" data-scale="2" data-rotate="-25">
+        <p>Weight Example:</p> 
+    <img src="sizeFonts.png" /></div>
+
+
+
+    <div id="" class="step" data-x="3000" data-y="1500" data-scale="6" data-rotate="1000">
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>

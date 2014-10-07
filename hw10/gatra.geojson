@@ -1,0 +1,46 @@
+{"type": "FeatureCollection", 
+	"features": [
+
+	{"type": "Feature",
+		"geometry": 
+		
+		{"type": "Point",
+  			"coordinates": [-71.185743, 41.966012] 
+		}, "properties": {"Wheaton College": "Wheaton College Bus Stop"}
+	},
+	
+	{"type": "Feature",
+		"geometry": 
+		
+		{"type": "Point",
+  			"coordinates": [-71.209556, 41.981008] 
+  		}, "properties": {"Great Woods Plaza" : "175 Mansfield Ave. Norton, MA"}
+  	},
+
+  	{"type": "Feature",
+		"geometry": 
+		
+		{"type": "Point",
+  			"coordinates": [-71.230055, 42.015714] 
+  		}, "properties": {"Mansfield Crossing": "280 School St Mansfield, MA"}
+  	},
+
+  	{"type": "Feature",
+		"geometry": 
+		
+		{"type": "Point",
+  			"coordinates": [-71.219717, 42.032705]
+  		}, "properties": {"Mansfield MBTA Bus Arrives" : "1 Crocker St Mansfield, MA"}
+  	},
+
+	{"type": "Feature",
+		"geometry":
+
+		{"type": "LineString",
+  			"coordinates": [ [-71.185743, 41.966012], [-71.209556, 41.981008], [-71.230055, 42.015714], [-71.219717, 42.032705] ]
+		},"properties": {"Gatra Route": "140"}
+
+	}
+
+	]
+}
